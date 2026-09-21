@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Class</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            background-color: steelblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: darkblue;
+        }
+
+        button:active{
+            background-color: crimson;
+        }
+
+        /* focus */
+
+        input:focus{
+            border: 2px solid green;
+            outline: none;
+            background-color: #f0fff0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Demo Pseudo-Class</h1>
+
+    <!-- Hover dan active -->
+    <h2>1. Hover & Active</h2>
+    <button>Klik Saya</button>
+
+    <!-- Focus -->
+    <h2>2. Focus</h2>
+    <input type="text" placeholder="Ketik Sesuatu..">
+    
+</body>
+</html>
