@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Animasi CSS</title>
+    <style>
+        @keyframes gerakKanan{
+            0%{
+                transform: translateX(0);
+            }
+            50%{
+                transform: translateX(200px);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+
+        .kotak1 {
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            position: relative;
+            animation: gerakKanan 3s infinite ease-in-out;
+        }
+
+        @keyframes gantiWarna {
+            0%{
+                background: red;
+            }
+            25%{
+                background: orange;
+            }
+            50%{
+                background: yellow;
+            }
+            75%{
+                background: green;
+            }
+            100%{
+                background: red;
+            }
+        }
+
+        .kotak2{
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+            animation: gantiWarna 5s infinite linear;
+        }
+
+        @keyframes putar {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        .kotak3{
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+            background: royalblue;
+            animation: putar 4s infinite linear;
+        }
+
+        @keyframes mengetik {
+            from{
+                width: 0;
+            }
+            to{
+                width: 100%;
+            }
+        }
+
+        .teks{
+            font-size: 24px;
+            font-family: monospace;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid black;
+            width: 0;
+            animation: mengetik 4s steps(30, end) infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <h2>Contoh CSS Animation</h2>
+
+    <div class="kotak1"></div>
+    <p>Kotak Merah bergerak kanan kiri</p>
+
+    <div class="kotak2"></div>
+    <p>Kotak berubah warna terus menerus</p>
+
+    <div class="kotak3"></div>
+    <p>Kotak biru berputar 360 derajat</p>
+
+    <div class="teks">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis cum temporibus delectus, eligendi ipsam accusamus inventore natus? Accusantium, non eveniet! Provident optio eaque ea nobis dolorem rem harum iste repellat?!</div>
+    <p>Teks terlihat seperti efek mesin ketik</p>
+
+
+</body>
+</html>
